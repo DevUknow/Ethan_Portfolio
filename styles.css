@@ -36,10 +36,11 @@ strong { color: var(--text); font-weight: 600; }
 .profile { position: sticky; top: 0; min-height: 720px; height: 100svh; max-height: 1000px; padding-block: 80px 48px; display: flex; flex-direction: column; }
 .wordmark { display: inline-flex; align-items: center; gap: 13px; font-family: ui-monospace, SFMono-Regular, Consolas, monospace; font-size: 9px; letter-spacing: 2px; color: var(--subtle); }
 .monogram { display: grid; place-items: center; width: 31px; height: 31px; border: 1px solid #71dac650; border-radius: 7px; font-family: inherit; font-size: 20px; font-weight: 600; letter-spacing: -2px; color: var(--accent); padding-right: 2px; line-height: 1; }
-.profile h1 { margin-top: 33px; font-size: clamp(60px, 5.6vw, 76px); letter-spacing: -4px; line-height: 1.14; font-weight: 700; color: var(--text); }
-.profile-title { margin-top: 20px; font-size: 20px; letter-spacing: -.65px; color: var(--text); font-weight: 500; }
+.profile h1 { margin-top: 33px; font-size: clamp(48px, 4.5vw, 62px); letter-spacing: -3px; line-height: 1.14; font-weight: 700; color: var(--text); }
+.profile-name { margin-top: 10px; font-size: 13px; color: var(--muted); }
+.profile-title { margin-top: 12px; font-size: 18px; line-height: 1.65; letter-spacing: -.65px; color: var(--text); font-weight: 500; }
 .profile-description { margin-top: 19px; font-size: 14px; line-height: 1.9; }
-.section-nav { display: flex; flex-direction: column; gap: 3px; margin-top: 49px; width: max-content; }
+.section-nav { display: flex; flex-direction: column; gap: 3px; margin-top: 32px; width: max-content; }
 .nav-link { display: flex; align-items: center; gap: 11px; min-height: 41px; font-size: 12px; font-weight: 600; color: var(--subtle); transition: color .2s; }
 .nav-line { height: 1px; width: 26px; background: #465a78; margin-right: 1px; transition: width .2s, background .2s; }
 .nav-number { font-size: 10px; font-weight: 400; font-family: ui-monospace, SFMono-Regular, Consolas, monospace; }
@@ -68,7 +69,7 @@ strong { color: var(--text); font-weight: 600; }
 .note-icon { color: var(--accent); font-size: 25px; line-height: 1.6; }
 .editorial-note p { font-size: 12px; color: #bbcadc; line-height: 1.9; }
 .editorial-note p span { font-size: 11px; color: var(--muted); }
-.interests { display: flex; gap: 18px; align-items: center; margin-top: 30px; font-family: ui-monospace, SFMono-Regular, Consolas, monospace; font-size: 9px; letter-spacing: 1.5px; color: var(--subtle); }
+.interests { display: flex; gap: 13px; align-items: center; flex-wrap: wrap; margin-top: 30px; font-family: ui-monospace, SFMono-Regular, Consolas, monospace; font-size: 9px; letter-spacing: 1.5px; color: var(--subtle); }
 .interest-divider { color: #3d5270; }
 .section-description { font-size: 13px; margin-top: -13px; margin-bottom: 30px; }
 .experience-item { display: grid; grid-template-columns: 103px minmax(0, 1fr); gap: 19px; position: relative; }
@@ -139,11 +140,14 @@ a.project-card:hover .arrow, .text-link:hover .arrow, .contact-link:hover .arrow
   .profile { padding-top: 100px; }
   .content { padding-top: 106px; }
 }
-@media (min-width: 961px) and (max-height: 719px) {
+@media (min-width: 961px) and (max-height: 799px) {
   .profile { top: 28px; height: auto; min-height: 0; padding-block: 20px; }
-  .profile h1 { margin-top: 20px; font-size: 55px; }
+  .profile h1 { margin-top: 20px; font-size: 48px; }
   .section-nav { margin-top: 25px; }
   .profile-bottom { padding-top: 25px; }
+}
+@media (min-width: 961px) and (max-height: 699px) {
+  .profile { position: static; }
 }
 @media (max-width: 1100px) and (min-width: 961px) {
   .layout { width: calc(100% - 80px); grid-template-columns: 340px minmax(0, 1fr); gap: 50px; }
@@ -156,7 +160,7 @@ a.project-card:hover .arrow, .text-link:hover .arrow, .contact-link:hover .arrow
   html { scroll-padding-top: 40px; }
   .layout { width: min(640px, calc(100% - 80px)); display: block; }
   .profile { position: static; min-height: 0; height: auto; max-height: none; padding-block: 55px 0; }
-  .profile h1 { font-size: 68px; margin-top: 30px; }
+  .profile h1 { font-size: 60px; margin-top: 30px; }
   .profile-title { margin-top: 16px; }
   .section-nav { flex-direction: row; flex-wrap: wrap; column-gap: 26px; row-gap: 4px; width: auto; margin-top: 28px; }
   .nav-link { gap: 6px; padding: 5px 0; min-height: 44px; border-bottom: 1px solid transparent; }
@@ -173,7 +177,7 @@ a.project-card:hover .arrow, .text-link:hover .arrow, .contact-link:hover .arrow
   .layout { width: calc(100% - 44px); }
   .profile { padding-top: 32px; }
   .wordmark { font-size: 8px; letter-spacing: 1.7px; }
-  .profile h1 { font-size: 58px; letter-spacing: -3px; margin-top: 29px; }
+  .profile h1 { font-size: 44px; letter-spacing: -2px; margin-top: 29px; }
   .profile-title { font-size: 18px; }
   .profile-description { font-size: 13px; margin-top: 15px; }
   .section-nav { column-gap: 23px; }
